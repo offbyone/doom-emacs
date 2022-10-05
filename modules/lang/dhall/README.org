@@ -13,7 +13,9 @@ functions + types + imports.
 /This module has no dedicated maintainers./ [[doom-contrib-maintainer:][Become a maintainer?]]
 
 ** Module flags
-/This module has no flags./
+- +dhall-format ::
+  Prefer the [[doom-package:dhall-mode]] formatter when [[doom-executable:dhall]] is
+  found along with this flag
 
 ** Packages
 - [[doom-package:dhall-mode]]
@@ -35,6 +37,12 @@ This module requires the =dhall-json= package, which provides both the
 #+begin_quote
  🔨 This module has no usage documentation yet. [[doom-contrib-module:][Write some?]]
 #+end_quote
+
+** formatter
+By enabling [[doom-module::editor format]], [[doom-package:apheleia]] will be
+used to format the current buffer.
+
+Enable [[doom-module::editor format +onsave]] to format the buffer on save.
 
 * TODO Configuration
 #+begin_quote
