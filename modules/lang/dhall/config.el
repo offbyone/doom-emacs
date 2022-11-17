@@ -5,8 +5,7 @@
   :config
   (set-repl-handler! 'dhall-mode #'dhall-repl-show)
   (setq dhall-format-at-save (modulep! +dhall-format))
-  (unless (and (modulep! +dhall-format)
-               (executable-find "dhall"))
+  (unless (and (modulep! +dhall-format))
     (set-formatter! 'dhall-format '("dhall" "lint" "-") :modes '(dhall-mode)))
   (map! :map dhall-mode-map
         :localleader
